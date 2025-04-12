@@ -23,7 +23,15 @@ def main():
     main_window = tk.Tk()
     main_window.title("Temperature Gui Converter")
     main_window.geometry("400x400")
-
+    # entry label and box
+    entry_Label = tk.Label(main_window, text='Enter a Number Here: ')
+    entry_Label.pack()
+    # entry box
+    entry_box = tk.Entry(main_window)
+    entry_box.pack()
+    # button
+    button = tk.Button(main_window, text="Enter", )
+    button.pack()
     main_window.mainloop()
 
 main()
