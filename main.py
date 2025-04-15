@@ -2,6 +2,12 @@ import tkinter as tk
 from tkinter import ttk
 
 def main():
+
+    # function to take input and show result of conversion
+    def entry_conversion(event):
+        conversion_input = user_input_entry.get()
+        print(conversion_input)
+
     main_window = tk.Tk()
     main_window.geometry('300x200')
     main_window.title("Temperature Unit Conversion")
@@ -18,6 +24,7 @@ def main():
     user_input_entry = tk.Entry(main_window)
     user_input_label.pack()
     user_input_entry.pack()
+    user_input_entry.bind("<Return>", entry_conversion)
 
 
     main_window.mainloop()
