@@ -5,8 +5,16 @@ def main():
 
     # function to take input and show result of conversion
     def entry_conversion(event):
-        conversion_input = user_input_entry.get()
-        print(conversion_input)
+        conversion_input = float(user_input_entry.get())
+        conversion = combo_box_options.get()
+        print(f"Selected value: {conversion_input}")
+        match conversion:
+            case 'Celsius to Fahrenheit':
+                result_formula = (conversion_input * 9 / 5) + 32
+                result_formula_statement = f"{conversion_input}ºC = {result_formula:.2f}ºF"
+                print(result_formula_statement)
+
+
 
     main_window = tk.Tk()
     main_window.geometry('300x200')
