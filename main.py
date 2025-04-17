@@ -13,6 +13,18 @@ def main():
                 result_formula = (conversion_input * 9 / 5) + 32
                 result_formula_statement = f"{conversion_input}ºC = {result_formula:.2f}ºF"
                 print(result_formula_statement)
+            case 'Fahrenheit to Celsius':
+                result_formula = (conversion_input - 32) * 5 / 9
+                result_formula_statement = f"{conversion_input}ºC = {result_formula:.2f}ºF"
+                print(result_formula_statement)
+            case 'Celsius to Kelvin':
+                result_formula = conversion_input + 273.15
+                result_formula_statement = f"{conversion_input}ºC = {result_formula}K"
+                print(result_formula_statement)
+            case 'Kelvin to Celsius':
+                result_formula = conversion_input - 273.15
+                result_formula_statement = f"{conversion_input}K = {result_formula}ºC"
+                print(result_formula_statement)
 
 
 
@@ -21,7 +33,7 @@ def main():
     main_window.title("Temperature Unit Conversion")
 
     # options for user to choose from for conversation
-    options = ['Celsius to Fahrenheit', 'Fahrenheit to Celsius']
+    options = ['Celsius to Fahrenheit', 'Fahrenheit to Celsius', 'Celsius to Kelvin', 'Kelvin to Celsius']
     combo_box_label = tk.Label(main_window, text="Choose a Conversion Option")
     combo_box_options = ttk.Combobox(main_window, values=options)
     combo_box_label.pack()
