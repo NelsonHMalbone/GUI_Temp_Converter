@@ -12,19 +12,31 @@ def main():
             case 'Celsius to Fahrenheit':
                 result_formula = (conversion_input * 9 / 5) + 32
                 result_formula_statement = f"{conversion_input}ºC = {result_formula:.2f}ºF"
-                print(result_formula_statement)
+                # will place a out of the result on the widget
+                output_label = tk.Label(main_window, text=result_formula_statement)
+                output_label.pack()
+                #print(result_formula_statement)
             case 'Fahrenheit to Celsius':
                 result_formula = (conversion_input - 32) * 5 / 9
                 result_formula_statement = f"{conversion_input}ºC = {result_formula:.2f}ºF"
-                print(result_formula_statement)
+                # will place a out of the result on the widget
+                output_label = tk.Label(main_window, text=result_formula_statement)
+                output_label.pack()
+                #print(result_formula_statement)
             case 'Celsius to Kelvin':
                 result_formula = conversion_input + 273.15
                 result_formula_statement = f"{conversion_input}ºC = {result_formula}K"
-                print(result_formula_statement)
+                # will place a out of the result on the widget
+                output_label = tk.Label(main_window, text=result_formula_statement)
+                output_label.pack()
+                #print(result_formula_statement)
             case 'Kelvin to Celsius':
                 result_formula = conversion_input - 273.15
                 result_formula_statement = f"{conversion_input}K = {result_formula}ºC"
-                print(result_formula_statement)
+                # will place a out of the result on the widget
+                output_label = tk.Label(main_window, text=result_formula_statement)
+                output_label.pack()
+                #print(result_formula_statement)
 
 
 
